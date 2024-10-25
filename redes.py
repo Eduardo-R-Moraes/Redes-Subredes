@@ -1,26 +1,25 @@
 from helpers import *
 
-setores = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-hosts = [10, 20, 100, 40, 50, 60, 70, 80, 90, 30]
-rede = [255, 255, 255, 255]
+setores = []
+hosts = []
 
-#print('\nPara parar de entrar dados digite 0 em um dos campos')
-#while True:
-    #print('---------------------------------------------------')
-    #setor = int(input('Digite o número do setor: '))
-    #if setor == 0: break
+print('\nPara parar de entrar dados digite 0 em um dos campos')
+while True:
+    print('---------------------------------------------------')
+    setor = int(input('Digite o número do setor: '))
+    if setor == 0: break
 
-    #if not setor in setores:
+    if not setor in setores:
 
-        #setores.append(setor)
-        #numHosts = int(input('Digite o número de hosts: '))
-        #if numHosts == 0: break
+        setores.append(setor)
+        numHosts = int(input('Digite o número de hosts: '))
+        if numHosts == 0: break
 
-        #setores.append(setores)
-        #hosts.append(hosts)
-    #else:
-        #print('---------------------------------------------------')
-        #print(f'Setor {setor} já está sendo usado!')
+        setores.append(setores)
+        hosts.append(hosts)
+    else:
+        print('---------------------------------------------------')
+        print(f'Setor {setor} já está sendo usado!')
 
 maiorHost = maior(hosts)
 
