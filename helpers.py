@@ -1,12 +1,12 @@
 def maior(vetor):
     return max(vetor)
 
-def faixa(numero):
+def faixaRede(numero:int):
     vetor = [2 ** i for i in range(2, 16)]
     numeroZeros = 0
     
     for i in range(len(vetor)):
-        if numero+1 < vetor[i]:
+        if numero + 1 < vetor[i]:
             numeroZeros = i + 1
             return numeroZeros, vetor[i]
         

@@ -11,19 +11,18 @@ while True:
 
     if not setor in setores:
 
-        setores.append(setor)
         numHosts = int(input('Digite o número de hosts: '))
         if numHosts == 0: break
 
-        setores.append(setores)
-        hosts.append(hosts)
+        setores.append(setor)
+        hosts.append(numHosts)
     else:
         print('---------------------------------------------------')
         print(f'Setor {setor} já está sendo usado!')
 
 maiorHost = maior(hosts)
 
-numeroZeros, faixa = faixa(maiorHost)
+numeroZeros, faixa = faixaRede(maiorHost)
 mascaraRede = f'/{32-numeroZeros}'
 
 mascBinaria = mascaraBinaria(numeroZeros)
