@@ -62,7 +62,7 @@ def redes(setores:list[int], hosts:list[int], faixa:int):
                 hostAtivosFinal = inicio + hosts[i] + 1
 
         rede = { 
-            'setor': i+1,
+            'setor': setores[i],
 
             'inicio': f'192.168.{subrede}.{inicio}',
             'fim': f'192.168.{subredeFinal}.{fim}',
