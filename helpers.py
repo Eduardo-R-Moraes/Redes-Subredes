@@ -1,13 +1,11 @@
-def maior(vetor):
-    return max(vetor)
-
 def faixaRede(numero:int):
-    vetor = [2 ** i for i in range(2, 16)]
+    vetor = [2 ** i for i in range(2, 18)]
     numeroZeros = 0
     
     for i in range(len(vetor)):
         if numero + 1 < vetor[i]:
-            numeroZeros = i + 1
+            numeroZeros = i + 2
+            print(f'I vale {i}')
             return numeroZeros, vetor[i]
         
 def mascaraBinaria(numeroZeros:int):
@@ -29,7 +27,7 @@ def mascaraDecimal(faixa):
         return f'255.255.255.{255 - faixa}'
 
     maior = faixa // 256
-    return f'255.255.{255 - maior}.0'
+    return f'255.255.{256 - maior}.0'
 
 def redes(setores:list[int], hosts:list[int], faixa:int):
     redes = []
@@ -79,7 +77,7 @@ def redes(setores:list[int], hosts:list[int], faixa:int):
 
         if faixa < 256: inicio += faixa
 
-        if faixa > 256: subrede = subredeFinal
+        if faixa > 256: subrede = subredeFinal + 1
 
         redes.append(rede)
 

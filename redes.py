@@ -20,10 +20,11 @@ while True:
         print('---------------------------------------------------')
         print(f'Setor {setor} já está sendo usado!')
 
-maiorHost = maior(hosts)
+maiorHost = max(hosts)
 
 numeroZeros, faixa = faixaRede(maiorHost)
-mascaraRede = f'/{32-numeroZeros}'
+
+mascaraRede = f'/{32 - numeroZeros}'
 
 mascBinaria = mascaraBinaria(numeroZeros)
 
